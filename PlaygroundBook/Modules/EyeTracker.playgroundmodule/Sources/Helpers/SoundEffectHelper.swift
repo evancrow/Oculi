@@ -1,0 +1,50 @@
+//
+//  SoundEffectHelper.swift
+//  EyeTracker
+//
+//  Created by Evan Crow on 3/6/22.
+//
+
+import AVFoundation
+
+enum AudioFiles: String {
+    case onHover = "OnHover.wav"
+    case onAction = "OnAction.wav"
+    case longBlink = "LongBlink.wav"
+}
+
+class SoundEffectHelper: NSObject {
+    static let shared  = SoundEffectHelper()
+    
+    /// Controls wether effects should be played when a user interaction event occurs.
+    public var shouldPlaySoundEffects = false
+    private var players: [AVAudioPlayer] = []
+    
+    public func playAudio(for event: AudioFiles) {
+        playAudio(filename: event.rawValue)
+    }
+    
+    private func playAudio(filename: String) {
+        guard shouldPlaySoundEffects, let path = Bundle.main.path(forResource: filename, ofType: nil) else {
+            return
+        }
+        
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            let player = try AVAudioPlayer(contentsOf: url)
+            player.play()
+            player.delegate = self
+            
+            players.append(player)
+        } catch {
+            print("Unable to load AVFile: ", filename)
+        }
+    }
+}
+
+extension SoundEffectHelper: AVAudioPlayerDelegate {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        players.removeAll { $0 == player }
+    }
+}
