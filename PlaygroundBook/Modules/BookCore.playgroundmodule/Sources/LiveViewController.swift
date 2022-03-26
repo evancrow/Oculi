@@ -12,6 +12,7 @@ import EyeTracker
 import PlaygroundSupport
 
 public enum LiveViewScene {
+    case preview
     case test
 }
 
@@ -26,18 +27,20 @@ public class LiveViewController: UIViewController {
         }
         
         switch scene {
+        case .preview:
+            showSwiftUIView {
+                Text("Buttons")
+            }
         case .test:
             showSwiftUIView {
-                InteractionViewWrapper { _ in 
-                    Text("Buttons")
-                }
+                Text("Buttons")
             }
         }
     }
     
     // MARK: - SwiftUI View Load Methods
-    private func showSwiftUIView<Content: View>(_ view: () -> Content) {
-        let hostingController = UIHostingController(rootView: view())
+    private func showSwiftUIView<Content: View>(_ view: () -> Content, wrapInInteractionViewWrapper: Bool = true) {
+        let hostingController = UIHostingController(rootView: InteractionViewWrapper { view() })
         guard let hostingView = hostingController.view else {
             return
         }

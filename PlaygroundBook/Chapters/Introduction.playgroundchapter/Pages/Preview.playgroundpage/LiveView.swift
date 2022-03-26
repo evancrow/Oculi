@@ -11,4 +11,4 @@ import SwiftUI
 
 // Instantiate a new instance of the live view from BookCore and pass it to PlaygroundSupport.
 PlaygroundPage.current.needsIndefiniteExecution = true
-PlaygroundPage.current.liveView = instantiateLiveView(with: .test)
+PlaygroundPage.current.liveView = instantiateLiveView(with: .preview)
