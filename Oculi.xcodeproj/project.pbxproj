@@ -33,7 +33,9 @@
 		205E1C1427E7854800C9A4C5 /* EyeTrackerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E1BFC27E7854800C9A4C5 /* EyeTrackerModel.swift */; };
 		205E1C1527E7854800C9A4C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E1BFD27E7854800C9A4C5 /* ContentView.swift */; };
 		20965C3627E920E6006ECAD2 /* InteractionViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20965C3527E920E6006ECAD2 /* InteractionViewWrapper.swift */; };
+		20B34ECA27EFEFB9007BA665 /* EyeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B34EC927EFEFB9007BA665 /* EyeIcon.swift */; };
 		20C4A64127E7897100EC70D5 /* LiveViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4A64027E7897100EC70D5 /* LiveViewSupport.swift */; };
+		20CA009A27F1130600B59A67 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CA009827F112DE00B59A67 /* PreviewView.swift */; };
 		5E086DCA2051DDAE004D8D25 /* LiveView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */; };
 		5E086DD32051E3A3004D8D25 /* Manifest.plist in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5E086DCF2051DF0F004D8D25 /* Manifest.plist */; };
 		5E551EC52371FC3F00784365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E551EC42371FC3F00784365 /* Assets.xcassets */; };
@@ -193,14 +195,14 @@
 		205E1BFC27E7854800C9A4C5 /* EyeTrackerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeTrackerModel.swift; sourceTree = "<group>"; };
 		205E1BFD27E7854800C9A4C5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20965C3527E920E6006ECAD2 /* InteractionViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionViewWrapper.swift; sourceTree = "<group>"; };
+		20B34EC927EFEFB9007BA665 /* EyeIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeIcon.swift; sourceTree = "<group>"; };
 		20C4A64027E7897100EC70D5 /* LiveViewSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewSupport.swift; sourceTree = "<group>"; };
+		20CA009827F112DE00B59A67 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		5E086DC02051C5A7004D8D25 /* Oculi.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Oculi.playgroundbook; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BookOverridingBuildSettings.xcconfig; sourceTree = "<group>"; };
 		5E086DCD2051DDB8004D8D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LiveView.storyboard; sourceTree = "<group>"; };
 		5E086DCF2051DF0F004D8D25 /* Manifest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Manifest.plist; sourceTree = "<group>"; };
 		5E0E37522065981C008FA4BE /* BuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BuildSettings.xcconfig; sourceTree = "<group>"; };
-		5E0E37542065A065008FA4BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		5E1004BE208E7F6E00BCFE70 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		5E2A7AE6204F630600F4E17A /* BaseBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BaseBuildSettings.xcconfig; sourceTree = "<group>"; };
 		5E551EC42371FC3F00784365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E6F7E5C2367B64A008CC191 /* BookAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAPI.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				205E1BE727E7854800C9A4C5 /* BlinkToggle.swift */,
 				205E1BE827E7854800C9A4C5 /* Cursor.swift */,
 				205E1BE927E7854800C9A4C5 /* ErrorView.swift */,
+				20B34EC927EFEFB9007BA665 /* EyeIcon.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,6 +373,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		20CA009727F112D100B59A67 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20CA009827F112DE00B59A67 /* PreviewView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5E086DA4204F706E004D8D25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,22 +423,12 @@
 			path = Overrides;
 			sourceTree = "<group>";
 		};
-		5E1004BD208E7F6E00BCFE70 /* LICENSE */ = {
-			isa = PBXGroup;
-			children = (
-				5E1004BE208E7F6E00BCFE70 /* LICENSE.txt */,
-			);
-			path = LICENSE;
-			sourceTree = "<group>";
-		};
 		5E2A7ADC204F611300F4E17A = {
 			isa = PBXGroup;
 			children = (
-				5E0E37542065A065008FA4BE /* README.md */,
 				5E086DC12051C5A7004D8D25 /* PlaygroundBook */,
 				5EA2E3BE2056F35A00416A35 /* LiveViewTestApp */,
 				5E2A7AE3204F628B00F4E17A /* Config Files */,
-				5E1004BD208E7F6E00BCFE70 /* LICENSE */,
 				5EA2E3D52056F83400416A35 /* Supporting Content */,
 				5E086DA4204F706E004D8D25 /* Products */,
 			);
@@ -481,6 +482,7 @@
 		5E70679D23678DA00094BDEF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				20CA009727F112D100B59A67 /* Views */,
 				5EF2F9AD2054BBF300191409 /* LiveViewController.swift */,
 				20C4A64027E7897100EC70D5 /* LiveViewSupport.swift */,
 			);
@@ -753,6 +755,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B34ECA27EFEFB9007BA665 /* EyeIcon.swift in Sources */,
 				205E1BFE27E7854800C9A4C5 /* FaceGeometry.swift in Sources */,
 				205E1C1527E7854800C9A4C5 /* ContentView.swift in Sources */,
 				205E1C0727E7854800C9A4C5 /* QuickActionDemos.swift in Sources */,
@@ -810,6 +813,7 @@
 			files = (
 				20C4A64127E7897100EC70D5 /* LiveViewSupport.swift in Sources */,
 				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
+				20CA009A27F1130600B59A67 /* PreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

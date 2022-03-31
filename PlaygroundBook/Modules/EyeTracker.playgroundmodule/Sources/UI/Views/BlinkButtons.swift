@@ -21,7 +21,13 @@ struct BlinkButton<Label: View>: View {
         Button {
             action()
         } label: {
-            label
+            HStack {
+                if config.showInteractionDetails {
+                    EyeIcon(type: .blink, count: numberOfBlinks)
+                }
+                
+                label
+            }
         }
         .modifier(BlinkButtonStyle(config: config, hovering: isHovering, isEnabled: isEnabled))
         .onBlink(interactionManager: interactionManager, numberOfBlinks: numberOfBlinks, action: action)
@@ -56,7 +62,13 @@ struct LongBlinkButton<Label: View>: View {
         Button {
             action()
         } label: {
-            label
+            HStack {
+                if config.showInteractionDetails {
+                    EyeIcon(type: .longBlink, count: duration)
+                }
+                
+                label
+            }
         }
         .modifier(BlinkButtonStyle(config: config, hovering: isHovering))
         .onLongBlink(interactionManager: interactionManager, duration: duration, action: action)
@@ -75,5 +87,15 @@ struct LongBlinkButton<Label: View>: View {
         self.config = config
         self.action = action
         self.label = label()
+    }
+}
+
+struct BlinkButton_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            BlinkButton {} label: { Text("Blink Button") }
+        }
+        .environmentObject(InteractionManager())
+        .environmentObject(GeometryProxyValue())
     }
 }

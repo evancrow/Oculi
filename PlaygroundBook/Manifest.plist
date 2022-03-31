@@ -19,6 +19,9 @@
 	<key>Chapters</key>
 	<array>
 		<string>Introduction.playgroundchapter</string>
+		<string>Interactions.playgroundchapter</string>
+		<string>Demos.playgroundchapter</string>
+		<string>WrappingUp.playgroundchapter</string>
 	</array>
 	<key>UserAutoImportedAuxiliaryModules</key>
 	<array>

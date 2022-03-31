@@ -11,17 +11,21 @@ struct BlinkButtonStyleConfig {
     let textColor: Color
     let backgroundColor: Color
     let cornerRadius: CGFloat
+    /// When `true`, will show the `EyeIcon` telling the user how to interact with the button.
+    let showInteractionDetails: Bool
     
     static let basic = BlinkButtonStyleConfig(
         textColor: .blue,
         backgroundColor: .blue.opacity(UXDefaults.backgroundOpacity),
-        cornerRadius: UXDefaults.backgroundCornerRadius)
+        cornerRadius: UXDefaults.backgroundCornerRadius,
+        showInteractionDetails: true)
     
     /// A red alternative version to `basic`
     static let basicRedAlt = BlinkButtonStyleConfig(
         textColor: .red,
         backgroundColor: .red.opacity(UXDefaults.backgroundOpacity),
-        cornerRadius: UXDefaults.backgroundCornerRadius)
+        cornerRadius: UXDefaults.backgroundCornerRadius.binade,
+        showInteractionDetails: true)
 }
 
 struct BlinkButtonStyle: ViewModifier {

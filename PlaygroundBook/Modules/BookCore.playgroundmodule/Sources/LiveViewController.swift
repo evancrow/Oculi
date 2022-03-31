@@ -29,7 +29,7 @@ public class LiveViewController: UIViewController {
         switch scene {
         case .preview:
             showSwiftUIView {
-                Text("Buttons")
+                PreviewView()
             }
         case .test:
             showSwiftUIView {
