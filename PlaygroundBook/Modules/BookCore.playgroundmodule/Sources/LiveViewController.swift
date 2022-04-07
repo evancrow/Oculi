@@ -28,8 +28,8 @@ public class LiveViewController: UIViewController {
         
         switch scene {
         case .preview:
-            showSwiftUIView {
-                PreviewView()
+            showSwiftUIView(wrapInInteractionViewWrapper: false) {
+                Text("Buttons")
             }
         case .test:
             showSwiftUIView {
@@ -39,9 +39,17 @@ public class LiveViewController: UIViewController {
     }
     
     // MARK: - SwiftUI View Load Methods
-    private func showSwiftUIView<Content: View>(_ view: () -> Content, wrapInInteractionViewWrapper: Bool = true) {
-        let hostingController = UIHostingController(rootView: InteractionViewWrapper { view() })
-        guard let hostingView = hostingController.view else {
+    private func showSwiftUIView<Content: View>(wrapInInteractionViewWrapper: Bool = true, _ view: () -> Content) {
+        @ViewBuilder
+        var rootView: some View {
+            if wrapInInteractionViewWrapper {
+                InteractionViewWrapper { view() }
+            } else {
+                view()
+            }
+        }
+        
+        guard let hostingView = UIHostingController(rootView: rootView).view else {
             return
         }
         

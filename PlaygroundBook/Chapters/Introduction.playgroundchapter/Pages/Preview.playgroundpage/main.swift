@@ -28,7 +28,12 @@ let speedY: CGFloat = 15
 
 import CoreGraphics
 import EyeTracker
+import PlaygroundPage
 
 UXDefaults.movmentMultiplier = CGSize(width: speedX, height: speedY)
 //#-end-hidden-code
 //: When you're ready, [go to the next page](@next).
+
+while true {
+    print("here")
+}
