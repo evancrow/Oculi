@@ -1,5 +1,5 @@
 # Oculi
-**Winner** - WWDC22 Swift Student Challenge
+**Accepted** - WWDC22 Swift Student Challenge
 
 Oculi is a revolutionary new framework that adds an easy-to-use, facial navigation and interaction interface to any SwiftUI app. Oculi works by tracking the user’s face to control a cursor, watching for different styles of blinks for interaction, and listening to the user’s speech for text input.
 
